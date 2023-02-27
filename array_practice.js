@@ -1,3 +1,10 @@
+/*
+    Script takes two arguments: array length, and number of elements to randomly remove from the array.
+    Returns the array, the missing elements, and the missing values.
+    To run:
+        node array_practice.js length number_missing
+*/
+
 
 function init(length, number_missing) {
     const arr = Array.from({length:length}, (_, index) => index +1);
