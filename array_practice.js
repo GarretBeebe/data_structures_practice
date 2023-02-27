@@ -21,24 +21,32 @@ function init() {
 }
 
 function findMissingElements() {
-    let currentElement;
+    let index;
     let missingElements = [];
+    let value;
 
     for (let i = 0; i < ARR.length; i++) {
         if (ARR[i] === '' || ARR[i] === undefined) { 
-            currentElement = i;
             missingElements.push(i);
         }
     }
 
     for (let i = 0; i < missingElements.length; i++) {
-        ARR[missingElements[i]] = ARR[missingElements[i] - 1] + 1;
-        console.log ("Missing element is: " + missingElements[i]);
-        console.log ("Mising value is: " + (ARR[missingElements[i] - 1] + 1));
+        index = missingElements[i];
+        if (index === 0) {
+            ARR[index] = 1;
+            value = 1;
+        }
+        else {
+            ARR[index] = ARR[index - 1] + 1;
+            value = ARR[index - 1] + 1;
+        }
+        console.log ("Missing element is: " + index);
+        console.log ("Mising value is: " + value);
+        
     }
     
 }
-
 
 init();
 findMissingElements();
