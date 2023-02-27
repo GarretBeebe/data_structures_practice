@@ -22,17 +22,17 @@ function init() {
 
 function findMissingElements() {
     let index;
-    let missingElements = [];
+    let missingIndicies = [];
     let value;
 
     for (let i = 0; i < ARR.length; i++) {
         if (ARR[i] === '' || ARR[i] === undefined) { 
-            missingElements.push(i);
+            missingIndicies.push(i);
         }
     }
 
-    for (let i = 0; i < missingElements.length; i++) {
-        index = missingElements[i];
+    for (let i = 0; i < missingIndicies.length; i++) {
+        index = missingIndicies[i];
         if (index === 0) {
             ARR[index] = 1;
             value = 1;
