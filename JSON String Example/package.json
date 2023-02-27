@@ -1,5 +1,5 @@
 {
   "dependencies": {
-    "json-scout": "^1.2.0"
+    "underscore": "^1.13.6"
   }
 }

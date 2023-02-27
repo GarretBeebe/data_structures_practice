@@ -1,11 +1,17 @@
 /* 
-    Find a string in a JSON Object
+    Find a key and value in a JSON Object based on a provided value
 */
 
-const { JsonScout } = require("json-scout");
+var _ = require('underscore');
 var ARGS = process.argv;
 var json = require(process.cwd() + '/generated.json');
-//console.log(json);
 
-const jScout = new JsonScout(json);
-console.log(jScout.scoutOneByValue("SLOGANAUT"));
+
+_.each(json, function(obj){
+    _.each(obj, function(value, key){
+        if (value === ARGS[2]) {
+            console.log(key + " : " + value);
+        }
+    });
+});
+
