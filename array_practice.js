@@ -2,7 +2,7 @@
     Script takes two arguments: array length, and number of elements to randomly remove from the array.
     Returns the array, the missing elements, and the missing values.
     To run:
-        node array_practice.js length number_missing
+        node array_practice.js length number_of_missing_elements
 */
 
 var ARGS = process.argv;
