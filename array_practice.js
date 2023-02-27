@@ -13,7 +13,9 @@ function init() {
     let missingElements = ARGS[3]
     ARR = Array.from({length:length}, (_, index) => index +1);
     for (let i = 0; i < missingElements; i++) {
-        delete ARR[Math.floor(Math.random() * length) + 1];
+        let randomElement = Math.floor(Math.random() * length);
+        delete ARR[randomElement];
+        console.log("Deleting element: " + randomElement);
     }
     console.log(ARR);
 }
@@ -30,6 +32,7 @@ function findMissingElements() {
     }
 
     for (let i = 0; i < missingElements.length; i++) {
+        ARR[missingElements[i]] = ARR[missingElements[i] - 1] + 1;
         console.log ("Missing element is: " + missingElements[i]);
         console.log ("Mising value is: " + (ARR[missingElements[i] - 1] + 1));
     }
