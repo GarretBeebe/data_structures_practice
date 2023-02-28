@@ -2,23 +2,31 @@
     Find a key and value in a JSON Object based on a provided value
 */
 var _ = require('underscore');
-var flatten = require('flat')
+var flatten = require('flat');
+
+function log(key , value) {
+    console.log(key);
+    console.log(value);
+}
 
 var args = process.argv;
 var json = require(process.cwd() + '/generated.json');
 var flatJSON = flatten(json);
-var keys = [];
 
 _.each(flatJSON, function(value, key){
+    let keys;
     let obj = json;
-    let test = String(value);
-    if (test.includes(args[2])===true) {
-        console.log(key + " : " + value);
+    if (String(value).includes(args[2])===true) {
         keys = key.split(".");
-        for (let i = 0; i < keys.length; i++) {
-            obj = obj[keys[i]];
+        if (keys.length === 1) {
+            log(keys[0], value);
         }
-        console.log(obj);
+        else {
+            for (let i = 0; i < keys.length-1; i++) {
+                obj = obj[keys[i]];
+            }
+            log(keys[0], obj);
+        }
     }
 });
 
