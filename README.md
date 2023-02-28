@@ -1,4 +1,4 @@
-## Data Structures Practice
+## Data Structures & Algorithims Practice
     Practice repository for data structures an algorithims technical interviews.
 
 ### Setup
