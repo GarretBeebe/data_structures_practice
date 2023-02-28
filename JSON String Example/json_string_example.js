@@ -3,15 +3,16 @@
 */
 
 var _ = require('underscore');
+var flatten = require('flat')
 var ARGS = process.argv;
 var json = require(process.cwd() + '/generated.json');
+var flatObj = flatten(json);
+console.log(flatten(json));
 
-
-_.each(json, function(obj){
-    _.each(obj, function(value, key){
-        if (value === ARGS[2]) {
-            console.log(key + " : " + value);
-        }
-    });
+_.each(flatObj, function(value, key){
+    if (value === ARGS[2]) {
+        console.log(key + " : " + value);
+    }
 });
+
 
