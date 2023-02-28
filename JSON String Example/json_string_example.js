@@ -10,7 +10,7 @@ function log(key , value) {
 }
 
 var args = process.argv;
-var json = require(process.cwd() + '/generated.json');
+var json = require(process.cwd() + '/data/generated.json');
 var flatJSON = flatten(json);
 
 _.each(flatJSON, function(value, key){
