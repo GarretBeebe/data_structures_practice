@@ -49,5 +49,4 @@ var length = args[2];
 var list = new LinkedList();
 populateLinkedList();
 findMidPoint();
-console.log(list);
 
