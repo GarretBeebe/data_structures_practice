@@ -4,5 +4,5 @@
 ### Setup
     - Install Node 10.8.0 (can use newer versions, I was just lazy)
     - Install npm 6.2.0
-    - Within each folder run:
+    - Run:
       - `npm install`
