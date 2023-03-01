@@ -23,8 +23,7 @@ const list = {
 
 var obj = flatten(list);
 var midPoint = Math.floor(Object.keys(flatten(list)).length/2)
-console.log(mid);
-var keys = Object.keys(obj)[mid].split(".");
+var keys = Object.keys(obj)[midPoint].split(".");
 obj = list;
 for (let i = 0; i < keys.length-1; i++) {
     obj = obj[keys[i]];
