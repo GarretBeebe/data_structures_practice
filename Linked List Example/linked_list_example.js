@@ -28,19 +28,20 @@ function populateLinkedList () {
         next = list.head;
         list.head = new Node(Math.floor(Math.random() * 100), list.head);
     }
+    console.log(list);
 }
 
 function findMidPoint () {
     let obj = flatten(list);
+    console.log("Flattend Linked List:");
     console.log(obj);
-    let midPoint = Math.floor(Object.keys(obj).length/2)
-    console.log(midPoint);
+    let midPoint = Math.floor(Object.keys(obj).length/2)-1
     let keys = Object.keys(obj)[midPoint].split(".");
-    console.log(keys);
     obj = list;
     for (let i = 0; i < keys.length-1; i++) {
         obj = obj[keys[i]];
     }
+    console.log("Middle value of linked lisst:");
     console.log(obj.data);
 }
 
