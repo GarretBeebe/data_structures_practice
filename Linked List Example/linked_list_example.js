@@ -6,6 +6,7 @@
 
 var args = process.argv;
 var flatten = require('flat');
+var length = args[2];
 
 class Node {
     constructor(data, next = null){
@@ -45,8 +46,6 @@ function findMidPoint () {
     console.log(obj.data);
 }
 
-
-var length = args[2];
 var list = new LinkedList();
 populateLinkedList();
 findMidPoint();
