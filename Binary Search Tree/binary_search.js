@@ -145,9 +145,11 @@ class Node {
     myTree.insert(i);
   }
 
+  //find argument
   console.log(myTree);
   console.log(myTree.find(args[3]));
 
+  //remove argument
   if(args[4]) {
     myTree.remove(args[4]);
     console.log(myTree);
