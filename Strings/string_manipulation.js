@@ -23,7 +23,7 @@ var array1 = originalString.split("");
 function check (string) {
     let testArray = string.split("");
     let reverseArray = testArray.reverse();
-    let reverseString = testArray.join('');
+    let reverseString = reverseArray.join('');
 
     if (reverseString==originalString) {
         return true
