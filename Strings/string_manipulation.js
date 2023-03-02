@@ -18,8 +18,6 @@ var string3 = "54321"
 var string4 = "21543"
 var stringArray = [string2, string3, string4];
 
-var array1 = originalString.split("");
-
 function check (string) {
     let testArray = string.split("");
     let reverseArray = testArray.reverse();
