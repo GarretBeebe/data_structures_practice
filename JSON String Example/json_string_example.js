@@ -1,7 +1,7 @@
 /* 
     Find a key and value in a JSON Object based on a provided value.
     To run:
-        node json_string_example.js 'your search string'
+        node json_string_example.js your_search_string
 */
 var _ = require('underscore');
 var flatten = require('flat');

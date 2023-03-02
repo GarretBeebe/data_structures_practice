@@ -1,7 +1,7 @@
 /*
  Find midpoint of a linked list (in this case, a JSON object)
  to run:
-    node linked_list_example.js 'depth of linked list'
+    node linked_list_example.js depth_of_linked_list
  */
 
 var args = process.argv;
