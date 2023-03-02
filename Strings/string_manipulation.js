@@ -6,6 +6,9 @@
     "12345" "32145"
     "12345" "54321"
     "12345" "21543"
+
+    to run:
+        node string_manipulation.js
 */
 
 
